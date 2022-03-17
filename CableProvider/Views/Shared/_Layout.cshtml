@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My To-Do List Cable Network</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="~/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">My To-Do List</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          @Html.ActionLink("Home", "Index","Home", null, new {@class ="nav-item nav-link"})
+          @Html.ActionLink("Channels", "Index", "Channels", null, new {@class ="nav-item nav-link"})
+          @Html.ActionLink("Shows","Index", "Shows", null, new {@class ="nav-item nav-link"})
+          @Html.ActionLink("Customers","Index","Customers", null, new {@class ="nav-item nav-link"})
+          @Html.ActionLink("Packages", "Index", "Packages", null, new {@class ="nav-item nav-link"})
+        </div>
+      </div>
+    </nav>
+    @RenderBody()
+  </div>
+</body>
+
+</html>
+
+

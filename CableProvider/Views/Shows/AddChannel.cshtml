@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@model CableProvider.Models.Show
+
+<h2>Add to a channel</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ShowId)
+  @Html.Label("Select channel")
+  @Html.DropDownList("ChannelId")
+  <input type="submit" value ="Save"/>
+}
+
+<p>@Html.ActionLink("Back to shows", "Index")</p>

@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+@using CableProvider.Models;
+
+
+<h1>@Model.Title Details</h1>
+
+
+<ul>
+  <li>Genre: @Model.Genre</li>
+  <li>Running Time: @Model.Duration mins</li>
+</ul>
+
+<div>@Html.ActionLink("Back to Shows", "Index")</div>
+<div>@Html.ActionLink("Add Show to Channel", "AddChannel", "Shows", new {id = @Model.ShowId})</div>

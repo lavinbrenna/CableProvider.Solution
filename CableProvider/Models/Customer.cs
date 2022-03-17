@@ -1,4 +1,4 @@
-using System.Collection.Generic;
+using System.Collections.Generic;
 using System;
 
 namespace CableProvider.Models
@@ -14,6 +14,6 @@ namespace CableProvider.Models
     public int BillTotal { get; set; }
     public DateTime StartDate { get; set; }
     public virtual ICollection<CustomerPackage> JoinEntities {get;set;}
-   
+
   }
 }
