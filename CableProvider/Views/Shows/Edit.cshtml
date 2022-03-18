@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model CableProvider.Models.Show
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model=> model.ShowId)
+  @Html.LabelFor(model => model.Title)
+  @Html.EditorFor(model => model.Title)
+  @Html.LabelFor(model => model.Genre)
+  @Html.EditorFor(model => model.Genre)
+  @Html.LabelFor(model => model.Duration)
+  @Html.EditorFor(model => model.Duration)
+  @Html.Label("Select a channel")
+  @Html.DropDownList("ChannelId")
+  <input type="submit" value="Save"/>
+}

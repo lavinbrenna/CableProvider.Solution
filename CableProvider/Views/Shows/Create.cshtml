@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model CableProvider.Models.Show
+
+<h4>Add a new show</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Title)
+  @Html.TextBoxFor(model => model.Title)
+
+  @Html.LabelFor(model => model.Genre)
+  @Html.TextBoxFor(model =>model.Genre)
+
+  @Html.LabelFor(model => model.Duration)
+  @Html.TextBoxFor(model => model.Duration, new {@type = "number"})
+
+  @Html.Label("Select channel")
+  @Html.DropDownList("ChannelId")
+
+  <input type ="submit" value="Add new show"/>
+
+}
+<p>@Html.ActionLink("Back to shows", "Index")</p>
+
+
